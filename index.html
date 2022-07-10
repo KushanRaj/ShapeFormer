@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="ShapeFormer: A Transformer for Point Cloud Completion">
+        <meta name="keywords" content="Light Field">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ShapeFormer: A Transformer for Point Cloud Completion</title>
+        <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+            rel="stylesheet">
+        <link rel="stylesheet" href="./static/css/bulma.min.css">
+        <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+        <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+        <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+        <link rel="stylesheet" href="./static/css/index.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script defer src="./static/js/fontawesome.all.min.js"></script>
+        <script src="./static/js/bulma-carousel.min.js"></script>
+        <script src="./static/js/bulma-slider.min.js"></script>
+        <script src="./static/js/index.js"></script>
+    </head>
+    <body>
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container">
+                    <div class="columns is-centered">
+                        <div class="column has-text-centered">
+                            <h1 class="title is-1 publication-title">ShapeFormer: A Transformer for Point Cloud Completion</h1>
+                            <div class="is-size-5 publication-authors">
+                                <span class="author-block">
+                                <a href="#">Mukund Varma T</a><sup>1*</sup>, &nbsp; </span>
+                                <span class="author-block">
+                                <a href="#">Kushan Raj</a><sup>1*</sup>,  &nbsp; </span>
+                                <span class="author-block">
+                                <a href="#">Dimple A Shajahan</a><sup>1,2</sup>, &nbsp;</span>
+                                <span class="author-block">
+                                <a href="#">M. Ramanathan</a><sup>1</sup>
+                                </span>
+                            </div>
+                            <div class="is-size-5 publication-authors">
+                                <span class="author-block"><sup>1</sup>Indian Institute of Technology Madras &nbsp;&nbsp;</span>
+                                <span class="author-block"><sup>2</sup>TKM College of Engineering &nbsp;&nbsp;</span>
+                            </div>
+                            <i>* indicates equal contribution</i>
+                            <!-- <h1 style="font-size:24px;font-weight:bold"></h1> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hero">
+            <div class="sec-body">
+                <div class="container is-size-5" style="text-align: center;">
+                    <div class="columns">
+                        <div class="column"></div>
+                        <div class="column"></div>
+                        <div class="column ">
+                            <a href="#" target="_blank">
+                                <div>
+                                    <img src="static/images/pdf.png" style="width:96px;height:120px;">
+                                </div>
+                                Paper
+                            </a>
+                        </div>
+                        <div class="column">
+                            <a href="#" target="_blank">
+                                <div>
+                                    <img src="static/images/github.png" style="width:120px;height:120px;">
+                                </div>
+                                Code <br>(to be released)
+                            </a>
+                        </div>
+                        <div class="column">
+                            <a href="#" target="_blank">
+                                <div>
+                                    <img src="static/images/drive.png" style="width:120px;height:120px;">
+                                </div>
+                                Completion3D-C <br>(to be released)
+                            </a>
+                        </div>
+                        <div class="column"></div>
+                        <div class="column"></div>
+                    </div>
+                </div>
+            </div>
+            <br />
+        </section>
+        <section class="hero is-light is-small">
+            <div class="hero-body">
+                <div class="container">
+                    <div>
+                        <img src="static/images/completion3d.png" style="width:100%;">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+        <div class="container">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-two-thirds">
+                    <h2 class="title is-2">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            We present ShapeFormer, a pure transformer based architecture that efficiently predicts missing regions from partially complete input point clouds. 
+                            Prior work for point cloud completion still produce samples of inferior visual quality, specifically near smooth regions, sharp corners, thin lines, etc. 
+                            To solve these problems, we carefully design the encoder and decoder of ShapeFormer to - (1) encode the partial input point cloud using memory efficient Local Context Transformer, (2) predict missing regions from the overall shape representation using Folding Blocks, (3) guide the completion procedure using geometric cues present in the input partial shape using Skip Context Transformer, (4) and finally group points based on their semantic similarity into regions using the learnable Region Grouping layers. 
+                            Our experiments demonstrate that ShapeFormer can accurately predict complete point clouds of high visual quality, and can achieve competitive results in the Completion3D benchmark and even outperform state-of-the-art methods in the Multi-View Partial Point Cloud benchmark (&#8595 10% CD). 
+                            We introduce Completion3D-C, a benchmark to evaluate robustness of various point cloud completion methods and ShapeFormer achieves best performance across various unseen transformations (&#8595 14% CD on average). 
+                            We also show that our method generalizes well to out-of-domain samples belonging to both seen and unseen categories. 
+                            All results bring us one step closer to using transformers as a ``universal modelling tool" for point clouds. 
+                        </p>
+                        <center>
+                        <div>
+                            <img src="static/images/overview.png" style="width:70%;">
+                        </div>
+                        <i>Overview of ShapeFormer</i>
+                        <div>
+                            <img src="static/images/arch.png" style="width:70%;">
+                        </div>
+                        <i>Detailed Network Architectures of various components in ShapeFormer.</i>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container">
+                    <div class="columns is-centered">
+                        <div class="column has-text-centered">
+                            <h1 class="title is-1 publication-title">Completion3D-C Benchmark</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hero is-light is-small">
+            <div class="hero-body">
+                <div class="container">
+                    <div>
+                        <img src="static/images/c3dc.png" style="width:100%;">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+        <div class="container">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-two-thirds">
+                    <div class="content has-text-justified">
+                        <p>
+                            Existing point cloud completion benchmarks contain point clouds which are clean, noise-free and pose-normalized while in practice, one would expect a model to perform well on point cloud data that are transformed in several ways, unseen during training. 
+                            To this end, we introduce a benchmark by extending the Completion3D dataset, called Completion3D-C (C for corrupted) and test various methods on their generalization capacity to unseen corruptions, domains and classes. 
+                            The different corruptions in the benchmark include:
+                            <ul>
+                                <li><b>Noise</b>: Add random noise sampled from a normal distribution to each point. </li>
+                                <li><b>Sparse</b>: Randomly set ~88% of the 2048 points of each object to zero i.e., each object has only 256 valid points in this set.</li>
+                                <li><b>Rotate</b>: Apply a random rotation on an arbitrary axis (z) to each object.</li>
+                                <li><b>Perturb</b>: Rotate the object by a small magnitude along any axis. </li>
+                                <li><b>Translation</b>: Each object is translated by a displacement vector sampled from a distribution. </li>
+                                <li><b>Out-Of-Domain</b>: Identify samples belonging to the same categories from out-of-domain MVP dataset which are semantically farthest to the point clouds present in Completion3D. Semantic closeness is determined using extracted feature vector from a trained PointNet classifier. </li>
+                                <li><b>Novel Category</b>: Identify samples belonging to unseen categories from MVP dataset (Eg: bed, bench, guitar, bus, etc). </li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        <footer class="footer">
+            <div align="center" class="container">
+                <div class="columns is-centered">
+                    <div class="content">
+                        This website is adapted from <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
