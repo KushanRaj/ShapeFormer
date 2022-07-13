@@ -1,10 +1,17 @@
-# ShapeFormer: Point Cloud Completion by Snowflake Point Deconvolution with Skip-Transformer
+# ShapeFormer: A Transformer for Point Cloud Completion
+[Mukund Varma T]()<sup>1</sup>,
+[Kushan Raj]()<sup>1</sup>,
+[Dimple A Shajahan]()<sup>1,2</sup>,
+[M. Ramanathan]()<sup>2</sup> <br>
+<sup>1</sup>Indian Institute of Technology Madras, <sup>2</sup>TKM College of Engineering<br>
 
-[Mukund Varma T](), [Kushan Raj](), [ Dimple A Shajahan](), [M. Ramanathan](), 
+[Project Page](https://kushanraj.github.io/ShapeFormer/) | [Paper]() | [Completion3D-C]()
+
+## To be released 
 
 
 -----
-This repository contains the source code for the paper [ShapeFormer: A Transformer for Point Cloud Completion]() (3DV 2022). The project page is [here](https://kushanraj.github.io/ShapeFormer/).
+
 
 
 
@@ -57,3 +64,10 @@ python setup.py install
 ## Acknowledgements
 
 Some of the code of this repo is borrowed from [ChamferDistancePytorch](https://github.com/ThibaultGROUEIX/ChamferDistancePytorch). We thank the authors for their great job!
+=======
+
+
+## Citation
+```
+```
+
