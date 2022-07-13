@@ -277,12 +277,6 @@ class RegionGrouping(nn.Module):
     def __init__(self, in_dim, n_regs, out_dim, rand_prob):
         super(RegionGrouping, self).__init__()
         self.occ = nn.Linear(in_dim, n_regs)
-        # self.g_fc = nn.Sequential(
-        #     nn.Linear(in_dim, out_dim),
-        #     nn.ReLU(),
-        #     nn.Linear(out_dim, out_dim),
-        #     nn.ReLU(),
-        # )
         self.reg_fc = nn.Sequential(
             nn.Linear(in_dim, out_dim),
             nn.ReLU(),
@@ -314,7 +308,7 @@ class RegionGrouping(nn.Module):
             out = out + mask[:, :, None] * reg_vec[:, None, :]
             if return_masks:
                 masks.append(mask[None, :, :])
-        #g = self.g_fc(x).max(dim=1)[0]
+
         g = g_vec
         out = torch.cat([x, out, g[:, None, :].repeat(1, x.shape[1], 1)], dim=2)
         if return_masks:
@@ -551,20 +545,7 @@ class CompletionNetwork(nn.Module):
 
 
 if __name__ == "__main__":
-    # net = ClassificationNetwork(
-    #     dims=[64, 128, 256],
-    #     knn_sizes=[16, 16, 16],
-    #     down_ratio=4,
-    #     block_sizes=[2, 2, 2],
-    #     attn_dim=64,
-    #     pos_hid_dim=64,
-    #     attn_hid_dim=256,
-    #     n_cls=10,
-    # ).cuda()
-    # pc = torch.randn(2, 1024, 3).cuda()
-    # o = net(pc)
-    # print(o.shape)
-
+    
     net = CompletionNetwork(
         dims=[64, 128, 256],
         knn_sizes=[16, 16, 16],
