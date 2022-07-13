@@ -29,7 +29,7 @@ We use the [MVP](https://mvp-dataset.github.io/) and [Compeletion3D](http://comp
 - [MVP](https://mvp-dataset.github.io/MVP/Completion.html)
 - [Completion3D](https://completion3d.stanford.edu/)
 
-The pretrained models on Completion3D and PCN dataset are available as follows:
+The pretrained models on Completion3D and MVP dataset are available as follows:
 
 - [ShapeFormer_pre-trained](https://drive.google.com/drive/folders/1oO7HKsyQuOr6n4HOxe07yHjxchYDUGM-?usp=sharing)
 
