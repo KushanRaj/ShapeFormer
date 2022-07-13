@@ -20,7 +20,7 @@
 ```
 ```
 
-[<img src="pics/network.png" width="100%" alt="Intro pic" />](pics/completion3d.png)
+[<img src="pics/completion3d.png" alt="Intro pic" />](pics/completion3d.png)
 
 ## Datasets
 
@@ -64,10 +64,5 @@ python setup.py install
 ## Acknowledgements
 
 Some of the code of this repo is borrowed from [ChamferDistancePytorch](https://github.com/ThibaultGROUEIX/ChamferDistancePytorch). We thank the authors for their great job!
-=======
 
-
-## Citation
-```
-```
 
